@@ -1,4 +1,4 @@
-# Gabriele Inghirami - g.inghirami@gsi.de - 2022 - License: PUBLIC DOMAIN
+# Gabriele Inghirami - g.inghirami -A T- gsi.de - 2022 - License: PUBLIC DOMAIN
 
 import math
 import numpy as np
