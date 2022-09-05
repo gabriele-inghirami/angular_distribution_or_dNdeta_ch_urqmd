@@ -17,6 +17,7 @@ eta_list = []
 dN_list = []
 
 with open(infile,"r") as ff:
+    print("Opening "+infile)
     events = int(ff.readline().split()[2])
     deta = float(ff.readline().split()[2])
     ff.readline() 

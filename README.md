@@ -4,8 +4,9 @@
 
 - pp_angular_distribution_urqmd.py: python script to compute the angular distribution probability of baryons and mesons
   originating in the first string or elastic interaction in pp collisions simulated with UrQMD.
-- compute_dN_deta_charged_particles.py: python script to compute dN/deta of charged particles from UrQMD .f14 output files
-- combine_dN_deta_charged_particles.py: python scripts that sums up two or more results of compute_dN_deta_charged_particles.py
+- compute_dN_deta_charged_particles_urqmd.py: python script to compute dN/deta of charged particles from UrQMD .f14 output files
+- compute_dN_deta_charged_particles_smash.py: python script to compute dN/deta of charged particles from SMASH Oscar2013 particle_lists.oscar output files
+- combine_dN_deta_charged_particles.py: python scripts that sums up two or more results of compute_dN_deta_charged_particles.py (both from UrQMD or SMASH data)
 
 This mini repository also contains:
 - gnuplot_scripts : to plot the results
