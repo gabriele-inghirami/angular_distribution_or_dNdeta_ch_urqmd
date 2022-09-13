@@ -6,7 +6,8 @@
   originating in the first string or elastic interaction in pp collisions simulated with UrQMD.
 - compute_dN_deta_charged_particles_urqmd.py: python script to compute dN/deta of charged particles from UrQMD .f14 output files
 - compute_dN_deta_charged_particles_smash.py: python script to compute dN/deta of charged particles from SMASH Oscar2013 particle_lists.oscar output files
-- combine_dN_deta_charged_particles.py: python scripts that sums up two or more results of compute_dN_deta_charged_particles.py (both from UrQMD or SMASH data)
+- combine_dN_deta_charged_particles.py: python script that sums up two or more results of compute_dN_deta_charged_particles.py (both from UrQMD or SMASH data)
+- compute_dN_dy_interacting_particles_urqmd.py: python script that computes dN/dy for interacting and non interacting (cross section scaled to 0) hadrons
 
 This mini repository also contains:
 - gnuplot_scripts : to plot the results
