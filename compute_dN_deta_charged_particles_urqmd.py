@@ -5,8 +5,11 @@ import numpy as np
 import os
 import sys
 
+# maximum (absolute value) of eta interval
 maxe = 5.
+# eta resolution
 de = 0.2
+
 ne = int(2*maxe/de+1)
 eta = np.linspace(-maxe,maxe,num=ne)
 top_abs_eta = eta[-1] + de/2

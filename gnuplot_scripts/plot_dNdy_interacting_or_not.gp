@@ -6,9 +6,9 @@ set ylabel "dN/dy"
 
 set title "Pb+Pb, {/Symbol \326}s_{NN} = 5.02 TeV, b=0, t = 0.5 fm"
 
-fo = "out_PbPb_urqmd.dat"
+fo = "out_PbPb_urqmd_new.txt"
 
-set key bottom center font ",18"
+set key center center font ",18"
 
 set mytics 2
 set mxtics 10

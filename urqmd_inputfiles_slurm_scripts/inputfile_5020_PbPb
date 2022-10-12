@@ -1,0 +1,24 @@
+pro 208 82
+tar 208 82
+
+nev 6
+imp 0
+
+rsd 0
+
+cto 18 1
+cto 41 1
+
+ecm 5020
+tim 0.5 0.5
+
+
+f13
+#f14
+f15
+f16
+f19
+f20 
+
+xxx
+ 
