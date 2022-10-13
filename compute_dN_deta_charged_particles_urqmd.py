@@ -8,7 +8,7 @@ import sys
 # maximum (absolute value) of eta interval
 maxe = 5.
 # eta resolution
-de = 0.2
+de = 0.1
 
 ne = int(2*maxe/de+1)
 eta = np.linspace(-maxe,maxe,num=ne)
@@ -30,35 +30,39 @@ for f in infiles:
         while(True):
             try:
                 for i in range(17):
-                    datei.readline() #we skip the first 17 lines
+                    datei.readline() # we skip the first 17 lines
             except:
+                #dbg print("Break in header")
                 break
             try:
                 n_items = int(datei.readline().split()[0])
-                datei.readline() #we skip the next line
+                #deb print(str(n_items))
+                datei.readline() # we skip the next line
             except:
+                #deb print("Break in read num of items")
                 break
             try:
                 dNdeta_buffer[:]=0
+                valid_event=False
                 for i in range(n_items):
                     stuff = datei.readline().split()
-                    #print(stuff[11])
                     if (stuff[11] != "0"): 
                         px, py, pz = np.float64(stuff[5:8])
                         p = math.sqrt(px**2+py**2+pz**2)
-                        if (p == pz):
+                        if (p == abs(pz)):
                             continue
+                        valid_event=True
                         eta_hadron = 0.5 * math.log( ( p + pz ) / ( p - pz ) )
-                        #print(str(eta_hadron))
                         if abs(eta_hadron) >= top_abs_eta:
                             continue
                         h = int(math.floor((eta_hadron + top_abs_eta)/de)) # it's - (-top_abs_eta)
                         dNdeta_buffer[h]+=1
-                if (i == n_items-1):
+                if ((i == n_items-1) and valid_event):
                     events+=1
-                    #print(str(events))
+                    #dbg print(str(events))
                     dNdeta+=dNdeta_buffer
             except:
+                #dbg print("Break in reading data")
                 break
 
 # output
