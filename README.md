@@ -7,7 +7,10 @@
 - compute_dN_deta_charged_particles_urqmd.py: python script to compute dN/deta of charged particles from UrQMD .f14 output files
 - compute_dN_deta_charged_particles_smash.py: python script to compute dN/deta of charged particles from SMASH Oscar2013 particle_lists.oscar output files
 - combine_dN_deta_charged_particles.py: python script that sums up two or more results of compute_dN_deta_charged_particles.py (both from UrQMD or SMASH data)
+- compute_dN_deta_charged_particles_urqmd_w_limit.py: python script to compute dN/deta of charged particles from SMASH Oscar2013 particle_lists.oscar output files,
+                                                      but only events with at least one charged hadron with |eta| < eta_limit are accepted
 - compute_dN_dy_interacting_particles_urqmd.py: python script that computes dN/dy for interacting and non interacting (cross section scaled to 0) hadrons
+- combine_dN_deta_charged_particles_w_limit.py: sums up the results produced by compute_dN_deta_charged_particles_urqmd_w_limit.py
 
 This mini repository also contains:
 - gnuplot_scripts : to plot the results
